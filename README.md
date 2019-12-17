@@ -1,19 +1,13 @@
 # CS236-HW2
 
-Programming assignment.
-
 Feel free to explore all of the files. The only ones you will need to modify are
 
 1. `codebase/utils.py`
-1. `codebase/models/vae.py`
+1. `codebase/models/vae.py`: Variational auto-encoder to learn a probabilistic model of the MNIST dataset
 1. `codebase/models/gmvae.py`
 1. `codebase/models/ssvae.py`
 1. `codebase/models/fsvae.py` (bonus)
 
-Do not modify the other files. All default hyperparameters have been prepared
-for you, so please do not change them. If you choose to do the programming
-assignment from scratch, please copy the hyperparameters faithfully so that your
-results are comparable to what we'd expect.
 
 The models can take a while to run on CPU, so please prepare accordingly. On a
 2018 Macbook Pro, it takes ~7 minutes each to run `vae.py` and `gmvae.py`. It
