@@ -22,10 +22,6 @@ takes ~50 minutes to run `ssvae.py`. It will take a very long time to run
 look somewhat decent (maybe around `50000` iterations). Note that we periodically
 save models for you.
 
-You are also free to create new files or jupyter notebooks to assist in
-answering any of the written assignment questions. For image generation, you
-will find the following functions helpful:
-
 1. `codebase.utils.load_model_by_name` (for loading a model. See example usage in `run_vae.py`)
 1. The sampling functionalities in `vae.py`/`gmvae.py`/`ssvae.py`/`fsvae.py`
 1. `numpy.swapaxes` and/or `torch.permute` (for tiling images when represented as numpy arrays)
@@ -46,8 +42,6 @@ codebase, in chronological order:
 1. `negative_elbo_bound` in `ssvae.py`
 1. `negative_elbo_bound` in `fsvae.py` (bonus)
 
-Once you've completed the assignment, run the `make_submission.sh` script and upload `hw2.zip`.
-
 ---
 
 ### Dependencies
@@ -63,34 +57,3 @@ tqdm==4.34.0
 
 ---
 
-### Submission
-
-Use `make_submission.sh` to zip up the appropriate files. This script simply zips the following files to `hw2.zip`:
-```
-codebase/utils.py 
-codebase/models/vae.py 
-codebase/models/gmvae.py
-codebase/models/ssvae.py 
-codebase/models/fsvae.py
-```
-
-Note that `hw2.zip` preserves the directories. If you're creating `hw2.zip` manually, you may wish to verify your zip file by running
-```
-python verify_submission.py
-```
-
-To do the inspection manually, simply do
-```
-unzip hw2.zip -d tmp_dir
-```
-And then check that `tmp_dir` has the following file structure:
-```
-tmp_dir/
-└── codebase
-    ├── models
-    │   ├── fsvae.py
-    │   ├── gmvae.py
-    │   ├── ssvae.py
-    │   └── vae.py
-    └── utils.py
-```
